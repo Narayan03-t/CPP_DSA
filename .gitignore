@@ -1,0 +1,21 @@
+# Compiled files
+*.exe
+*.out
+*.o
+*.obj
+*.class
+
+# Editor folders
+.vscode/
+build/
+
+# Heavy files
+*.rar
+*.zip
+*.pdf
+*.xlsx
+*.png
+
+# Unwanted folders
+Leetcode Company Wise Problems - Updated as of March 2025 - Krishan Kumar/
+swark-output/
