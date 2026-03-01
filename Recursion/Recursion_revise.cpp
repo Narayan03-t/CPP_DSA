@@ -86,7 +86,7 @@ int main(){
     // }
 
 
-    cout<<sumof1Ton(10);
+    // cout<<sumof1Ton(10);
 
 
     return 0;
