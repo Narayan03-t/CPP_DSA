@@ -1,35 +1,19 @@
-// neocollab recursion question
+#include <iostream>
+#include <functional>
 
-// question 1-->find LCM of the given integer (like given 3 integer as as input 10,15,20 and output 60)
+int main(){
+    int B[] = {3, 15, 7, 22, 9};
+    int n = sizeof(B) / sizeof(B[0]);
 
-// question 2--> You need to implement the power() function that efficiently calculates the modular exponentiation of 'a' raised to the power of 'b', using recursion and modular arithmetic.   Input 1 :
-// 2
-// 15 5
-// 100 5
-// Output 1 :
-// 759375
-// 10000000000
+    std::function<int(int[], int)> getMin;
 
+    // LINE-1
+    getMin = [&getMin](int arr[], int n) -> int ->
+ {
+        return (n == 1) ? arr[0] :
+               std::min(arr[n-1], getMin(arr, n-1));
+    };
 
-
-// Question 3 You work in a large warehouse where products are numbered from 0 to N-1. Your task is to identify any products that appear twice in the inventory list and report them in ascending order. This helps ensure accurate inventory management.
-
-// For instance, if you have N = 4 products with IDs {0, 1, 3, 2}, and no duplicates exist, you report -1. However, if you have N = 5 products with IDs {1, 1, 2, 2, 3}, you must report the duplicates in ascending order: 1 2. This ensures your warehouse maintains efficient inventory control. The input products must be listed in ascending order.
-
-// Now design a program using recursion to solve the given problem statement. 
-
-// Input format :
-// The first line contains an integer N, the size of the array.
-
-// The second line contains N space-separated integers a[0], a[1], ..., a[N-1], representing the elements in the array in ascending order.
-
-// Output format :
-// The output should be a space-separated list of integers.
-
-// If there are elements that occur twice in the given array, list them in ascending order.
-
-// If no such elements are found, the output should be "-1" to indicate that there are no duplicates.
-
-
-
-// Question 4->  Tower of Honoi 
+    std::cout << getMin(B, n);
+    return 0;
+}

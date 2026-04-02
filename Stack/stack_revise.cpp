@@ -116,3 +116,34 @@
 
 
 
+
+
+// Implement two stack in an array
+
+#include<iostream>
+using namespace std;
+
+class stack{
+    int* arr;
+    int size;
+    int top1;
+    int top2;
+
+    stack(int capacity){
+        arr = new int[capacity];
+
+    }
+
+
+};
+
+
+int main(){
+
+
+
+    return 0;
+}
+
+// reverse string using stack
+// print middle of stack
