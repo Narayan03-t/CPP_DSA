@@ -1,19 +1,28 @@
-#include <iostream>
-#include <functional>
+#include<iostream>
+using namespace std;
 
 int main(){
-    int B[] = {3, 15, 7, 22, 9};
-    int n = sizeof(B) / sizeof(B[0]);
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    long long ans=0;
+    long long len=1;
+    for(int i=1;i<n;i++){
+        if(arr[i]>=arr[i-1]){
+            len++;
+        }
+        else{
+            ans = ans+(len*(len+1))/2;
+            len=1;
+        }
+        ans = ans+(len*(len+1))/2;
+        cout<<ans;
+    }
 
-    std::function<int(int[], int)> getMin;
 
-    // LINE-1
-    getMin = [&getMin](int arr[], int n) -> int ->
- {
-        return (n == 1) ? arr[0] :
-               std::min(arr[n-1], getMin(arr, n-1));
-    };
 
-    std::cout << getMin(B, n);
     return 0;
 }

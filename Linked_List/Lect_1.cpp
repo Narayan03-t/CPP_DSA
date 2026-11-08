@@ -34,7 +34,7 @@ Node* insertAtHead(int value,Node* &head,Node* &tail){
         // when LL is not empty 
         // step 1: create a newNode
         Node* newNode = new Node(value);
-        // step 23: newNode ka connect kro head node se 
+        // step 2: newNode ka connect kro head node se 
         newNode->next = head; 
         // step 3: head ko update kro 
         head = newNode;
